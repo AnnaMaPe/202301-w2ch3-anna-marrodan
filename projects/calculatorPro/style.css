@@ -1,119 +1,116 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-body{
-    background-image: url("https://images.unsplash.com/photo-1634128221889-82ed6efebfc3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fG51bWJlcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60");
-    backdrop-filter: blur(3px);
-    height: 100vh;
-    width: 100vw;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center; 
-    content: normal;  
-    padding-top: 10rem;
+body {
+  background-image: url("https://images.unsplash.com/photo-1634128221889-82ed6efebfc3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fG51bWJlcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60");
+  backdrop-filter: blur(3px);
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  content: normal;
+  padding-top: 10rem;
 }
 
-
-.leftside, 
+.leftside,
 .rightside {
-    display: inline;
+  display: inline;
 }
 
-.calculator{
-    height: 28rem;
-    width: 26rem;
-    padding: 20px;
-    border-radius: 70px;
-    background-color: rgb(253, 228, 238, 0.8);
-    border: 2px solid rgb(238, 144, 180); 
-    margin: auto;
+.calculator {
+  height: 28rem;
+  width: 26rem;
+  padding: 20px;
+  border-radius: 70px;
+  background-color: rgb(253, 228, 238, 0.8);
+  border: 2px solid rgb(238, 144, 180);
+  margin: auto;
 }
 
-button{
-    cursor: pointer;
-    height: 4em;
-    width: 4em;
-    border-radius: 50%;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    text-align: center;
-    font-size: 16px;
-    margin: 2px;
+button {
+  cursor: pointer;
+  height: 4em;
+  width: 4em;
+  border-radius: 50%;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: center;
+  font-size: 16px;
+  margin: 2px;
 }
 
 button:hover {
-    background-color: #fd6266 ;
-    color: #ffe3e2;
-    transition: 0.1s ease-in-out;
+  background-color: #fd6266;
+  color: #ffe3e2;
+  transition: 0.1s ease-in-out;
 }
 
-.numbers{
-    border: solid;
-    background-color: rgb(255,209,220); 
-    color: rgb(255,0,127);
-    text-decoration:rgb(255,0,127) ;
-    border-color: rgb(255,0,127);
+.numbers {
+  border: solid;
+  background-color: rgb(255, 209, 220);
+  color: rgb(255, 0, 127);
+  text-decoration: rgb(255, 0, 127);
+  border-color: rgb(255, 0, 127);
 }
 
 .operators,
 .squareroot {
-    border-style: outset ;
-    background-color: rgb(241, 203, 245); 
-    color: rgb(203, 129, 211);
-    text-decoration:rgb(203, 129, 211);
-    border-color: rgb(203, 129, 211);
+  border-style: outset;
+  background-color: rgb(241, 203, 245);
+  color: rgb(203, 129, 211);
+  text-decoration: rgb(203, 129, 211);
+  border-color: rgb(203, 129, 211);
 }
 
 .clear,
 .clearall,
-.equal{
-    border-style:dashed ;
-    background-color: rgb(227, 252, 233);
-    color: rgb(135, 224, 155);
-    text-decoration: rgb(135, 224, 155) ;
-    border-color: rgb(135, 224, 155);
-    border-radius: 50% 20% / 10% 40%;;
+.equal {
+  border-style: dashed;
+  background-color: rgb(227, 252, 233);
+  color: rgb(135, 224, 155);
+  text-decoration: rgb(135, 224, 155);
+  border-color: rgb(135, 224, 155);
+  border-radius: 50% 20% / 10% 40%;
 }
 
-.displayscreen{
-    height: 7rem;
-    margin-bottom: 1em;
-    border-radius:  30%;    
-    background-color: rgb(253, 255, 211);
-    box-shadow: inset -6px -6px 13px white, 
-               inset 6px 6px 13px rgb(238, 144, 180);
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    flex-direction: column;
-    padding: 10px;
+.displayscreen {
+  height: 7rem;
+  margin-bottom: 1em;
+  border-radius: 30%;
+  background-color: rgb(253, 255, 211);
+  box-shadow: inset -6px -6px 13px white, inset 6px 6px 13px rgb(238, 144, 180);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 10px;
 }
 
-input{
-    border: none;
-    background-color:transparent;
-    pointer-events: none;
-    text-align: right;
-    width: 20rem;
-    margin-top: 1rem;
-    margin-right: 0.5rem;
+input {
+  border: none;
+  background-color: transparent;
+  pointer-events: none;
+  text-align: right;
+  width: 20rem;
+  margin-top: 1rem;
+  margin-right: 0.5rem;
 }
 
-.displaysup{
-    resize: vertical;
-    margin-top: 1rem;
-    opacity: 0.4;
-    font-size: 20px;
-    overflow: hidden;
-    color: rgb(203, 129, 211);
+.displaysup {
+  resize: vertical;
+  margin-top: 1rem;
+  opacity: 0.4;
+  font-size: 20px;
+  overflow: hidden;
+  color: rgb(203, 129, 211);
 }
 
-.displayinf{
-    resize: horizontal;
-    margin-top: -0.5rem;
-    margin-bottom: 1rem ;
-    font-size: 28px;
-    overflow: hidden;
+.displayinf {
+  resize: horizontal;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+  font-size: 28px;
+  overflow: hidden;
 }
-
-
