@@ -1,5 +1,6 @@
 module.exports = {
   env: {
+    browser: true,
     es2021: true,
   },
   extends: ["xo", "prettier"],
@@ -8,8 +9,5 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  rules: {
-    "no-alert": "off",
-    "no-console": "off",
-  },
+  rules: { "no-console": "off", "no-alert": "off" },
 };
