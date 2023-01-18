@@ -35,7 +35,7 @@ function calculator() {
   function calculations() {
     let resultSum = 0;
     function sum() {
-      for (i = 0; i < userNumbers.length; i++) {
+      for (let i = 0; i < userNumbers.length; i++) {
         resultSum += userNumbers[i];
       }
 
@@ -48,7 +48,7 @@ function calculator() {
 
     function rest() {
       let resultRest = userNumbers[0];
-      for (i = 1; i < userNumbers.length; i++) {
+      for (let i = 1; i < userNumbers.length; i++) {
         resultRest -= userNumbers[i];
       }
 
@@ -61,7 +61,7 @@ function calculator() {
 
     function multiplication() {
       let resultMultiplication = userNumbers[0];
-      for (i = 1; i < userNumbers.length; i++) {
+      for (let i = 1; i < userNumbers.length; i++) {
         resultMultiplication *= userNumbers[i];
       }
 
@@ -74,7 +74,7 @@ function calculator() {
 
     function division() {
       let resultDivision = userNumbers[0];
-      for (i = 1; i < userNumbers.length; i++) {
+      for (let i = 1; i < userNumbers.length; i++) {
         resultDivision = resultDivision /= userNumbers[i];
       }
 
@@ -85,12 +85,13 @@ function calculator() {
       return Number(resultDivision.toFixed(3));
     }
 
-    return (summary = [
+    const summary = [
       { Operation: "SUM", Result: sum() },
       { Operation: "REST", Result: rest() },
       { Operation: "MULTIPLICATION", Result: multiplication() },
       { Operation: "DIVISION", Result: division() },
-    ]);
+    ];
+    return summary;
   }
 
   calculations();
@@ -114,8 +115,10 @@ function calculator() {
     alert(" The square root of your value is " + squareRoot());
   } else
     alert(
-      "The results for the calculations for your two values are as follow: "
-    ) + console.table(calculations());
+      `The results for the calculations for your two values are as follow: ${console.table(
+        calculations()
+      )}`
+    );
 
   function bye() {
     const again = prompt("Would you like to start over? Y or N");
@@ -127,14 +130,13 @@ function calculator() {
       while (againUpper !== "Y" || againUpper !== "N") {
         if (againUpper === "Y") {
           calculator();
-          break;
-        } else if (againUpper === "N") {
-          alert("See you soon!");
-          break;
-        } else alert("Please introduce a Y or N answer.");
-        bye();
-        break;
+        }
       }
+
+      if (againUpper === "N") {
+        alert("See you soon!");
+      } else alert("Please introduce a Y or N answer.");
+      bye();
     }
   }
 
